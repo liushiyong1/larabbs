@@ -103,6 +103,9 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'name' => [
+            'between' => '用户名必须在3到35个字符串之间',
+        ]
     ],
 
     /*
