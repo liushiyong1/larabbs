@@ -26,4 +26,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /*
+     * 用户模型与话题模型关联，一对多，一个用户可以有多个话题
+     * 用户一下函数关联之后，可以使用 $user->topics(),取出用户发布的所有话题数据
+     * */
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
